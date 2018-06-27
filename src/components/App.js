@@ -22,10 +22,8 @@ export default class App extends Component {
             image='https://www.qualium-systems.com/wp-content/uploads/2015/07/icon-reactjs.svg'
           />
         </Header>
-        <PeopleQuery render={data => {
-          console.log('-------------- data2', data);
-          return <List list={data.people} />
-        }} />
+        <PeopleQuery render={data => <List list={data.people} />
+        } />
       </div>
     )
   }
