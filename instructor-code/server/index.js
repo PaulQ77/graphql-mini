@@ -5,16 +5,15 @@ const PORT = 3050
 const graphqlHTTP = require('express-graphql')
 const schema = require('./graphql/schema')
 
-
 const app = express()
 
 app.use(bodyParser.json())
 app.use(cors())
 
-//endpoint: /graphql
+// endpoint: /graphql
 app.use('/graphql', graphqlHTTP({
-    schema: schema,
-    graphiql: true,
+  schema: schema,
+  graphiql: true,
 }));
 
 app.listen(PORT, () => console.log('Listening on Port: ' + PORT))
